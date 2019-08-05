@@ -1,0 +1,58 @@
+#blackout {
+  background: rgba(102, 102, 102, 0.9);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  position: fixed;
+  z-index: 101;
+}
+#window {
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  padding: 15px;
+  border: 3px solid #383838;
+  border-radius: 10px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: #aaaaaa;
+}
+#blackout:target {display: block; position: fixed;}
+.close {
+    top: -27px;
+    right: -27px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    border: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background-color: rgba(71, 71, 71, 0.9);
+    cursor: pointer;
+    outline: none;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+}

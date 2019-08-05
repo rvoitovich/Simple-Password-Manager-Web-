@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  background: #f2f2f2;
+}
+header a {
+  display: block;
+  text-decoration: none;
+  outline: none;  
+  transition: .3s ease-in-out;
+}
+.logo {
+  color: #6b6b6b;
+  font-family: 'Impact', serif;
+  font-size: 3.5em;
+  padding: 20px 0;
+}
+nav {
+  display: table;
+  margin: 0 auto;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.topmenu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.topmenu > li {
+  width: 25%;
+  float: left;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+}
+.topmenu > li > a {
+  text-transform: uppercase;
+  font-size: 90%;
+    font-weight: bold;
+    color: #404040;
+  padding: 15px 30px;
+}
+.topmenu li a:hover {color: #7a7a7a;}
+.submenu-link:after {
+  font-family: "FontAwesome";
+  color: inherit;
+  margin-left: 10px;
+}
+.submenu {
+  background: #2d2d2d;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 5;
+    width: 120%;
+  opacity: 0;
+    transform: scaleY(0);
+    transform-origin :0 0;
+  transition: .5s ease-in-out;
+}
+.submenu a {
+  color: white;
+    text-align: left;
+    padding: 5% 7%;
+    font-size: 70%;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.submenu li:last-child a {border-bottom: none;}
+.topmenu > li:hover .submenu {
+  opacity: 1;
+    transform: scaleY(1);
+}
+#gallery {
+  position: relative;
+  padding-top: 30%;
+  -moz-user-select: none; user-select: none;
+}
+#gallery img {
+  position: absolute;
+  top: 55%;
+  left: 12.5%;
+  max-width: 23%;
+  max-height: 70%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: zoom-in;
+  transition: .2s;
+}
+#gallery img:nth-child(4n-2) {left: 37.5%;}
+#gallery img:nth-child(4n-1) {left: 62.5%;}
+#gallery img:nth-child(4n) {left: 87.5%;}
+#gallery img:nth-child(n+5) {top: 75%;}
+#gallery img:focus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  max-width: 200%;
+  max-height: 200%;
+  outline: none;
+  pointer-events: none;
+}
+#gallery img:focus ~ div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  cursor: zoom-out;
+}
